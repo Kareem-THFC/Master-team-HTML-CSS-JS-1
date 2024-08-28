@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/base.css" />
+    <link rel="stylesheet" href="../styles/nav.css" />
+    <link rel="stylesheet" href="../styles/cart.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <img src="../assets/logo.png" alt="Company Logo" />
+
+        <div class="hamburger">
+          <input type="checkbox" />
+
+          <div></div>
+          <div></div>
+          <div></div>
+
+          <ul class="nav-items-list">
+            <li class="nav-item">
+              <a href="/templates/index.html">Home</a>
+            </li>
+            <li class="nav-item"><a href="/">About Us</a></li>
+            <li class="nav-item"><a href="/">Our Lands</a></li>
+            <li class="nav-item"><a href="/">Our Suppliers</a></li>
+            <li class="nav-item"><a href="/">Products</a></li>
+            <li class="nav-item"><a href="/">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="user">
+        <a href="#profile" class="profile">
+          <img src="../assets/profile Image.png" alt="Profile Picture" />
+        </a>
+      </div>
+    </header>
+
+    <section class="main">
+      <div class="cart-header-container">
+        <h2 class="cart-title">Cart</h2>
+        <h2 class="cart-price"></h2>
+      </div>
+
+      <div class="cart-details">
+        <ul class="cart-list"></ul>
+      </div>
+    </section>
+
+    <script src="../scripts/cart.js"></script>
+  </body>
+</html>

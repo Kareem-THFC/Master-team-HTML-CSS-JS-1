@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/base.css" />
+    <link rel="stylesheet" href="../styles/nav.css" />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <img src="../assets/logo.png" alt="Company Logo" />
+
+        <div class="hamburger">
+          <input type="checkbox" />
+
+          <div></div>
+          <div></div>
+          <div></div>
+
+          <ul class="nav-items-list">
+            <li class="nav-item active"><a href="/">Home</a></li>
+            <li class="nav-item"><a href="/">About Us</a></li>
+            <li class="nav-item"><a href="/">Our Lands</a></li>
+            <li class="nav-item"><a href="/">Our Suppliers</a></li>
+            <li class="nav-item"><a href="/">Products</a></li>
+            <li class="nav-item"><a href="/">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="user">
+        <a href="cart.html" class="cart">
+          <img src="../assets/shopping Cart icon.png" alt="Cart" />
+          <span class="notification"></span>
+          <div class="cart-content">
+            <div class="cart-items"></div>
+            <div id="btn-checkout" class="card-btn btn-buy">Checkout</div>
+          </div>
+        </a>
+        <a href="#profile" class="profile">
+          <img src="../assets/profile Image.png" alt="Profile Picture" />
+        </a>
+      </div>
+    </header>
+
+    <section class="main" id="main">
+      <div class="featured-card">
+        <img
+          src="../assets/coffe-bage.png"
+          alt="coffee bag"
+          class="featured-card-img"
+        />
+        <div class="featured-card-content">
+          <h3 class="featured-card-title">Mocha Latte</h3>
+          <p class="featured-card-paragraph">
+            Coffee is a brewed drink prepared from roasted coffee beans, the
+            seeds of berries from certain Coffea species.
+          </p>
+          <div class="featured-card-price-group">
+            <span class="featured-card-quantity">1 Bag</span>
+            <span class="featured-card-price">$69.99</span>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="heading">
+          <h3 class="heading-secondary">Be Active</h3>
+          <h1 class="heading-primary">Barnsley Brew Coffee</h1>
+          <p class="paragraph">
+            Coffee is a brewed drink prepared from roasted coffee beans, the
+            seeds of berries from certain Coffea species. When coffee berries
+            turn from.
+          </p>
+          <span>Top Packs</span>
+        </div>
+        <div class="cards-container">
+          <div class="card">
+            <img
+              src="../assets/iced-coffee.png"
+              alt="coffee bag"
+              class="card-img"
+            />
+            <!-- <div class="card-content"> -->
+            <h3 class="card-title">Iced Coffee</h3>
+            <a onclick="popupOpen()" class="card-paragraph">
+              Coffee is a brewed drink prepared from roasted coffee beans, the
+              seeds of berries from certain Coffea species. Coffee is a brewed
+              drink prepared from roasted coffee beans, the seeds of berries
+              from certain Coffea species. Coffee is a brewed drink prepared
+              from roasted coffee beans, the seeds of berries from certain
+              Coffea species.
+            </a>
+            <!-- </div> -->
+          </div>
+          <div class="card">
+            <img src="../assets/frappe.png" alt="coffee bag" class="card-img" />
+            <h3 class="card-title">Caramel Frappe</h3>
+            <p class="card-paragraph">
+              Coffee is a brewed drink prepared from roasted coffee beans, the
+              seeds of berries from certain Coffea species.
+            </p>
+          </div>
+          <div class="card">
+            <img src="../assets/latte.png" alt="coffee bag" class="card-img" />
+            <h3 class="card-title">Mocha Latte</h3>
+            <p class="card-paragraph">
+              Coffee is a brewed drink prepared from roasted coffee beans, the
+              seeds of berries from certain Coffea species.
+            </p>
+          </div>
+          <div class="card-secondary">
+            <img
+              src="../assets/coffee-icon.png"
+              alt="coffee-icon"
+              class="card-icon"
+            />
+            <span>View More</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="products"></section>
+
+    <div class="popup hidden" id="popup">
+      <div class="popup-content hidden">
+        <div class="popup-header">
+          <h3 class="popup-name"></h3>
+          <a class="popup-close" onclick="popupClose()">&times;</a>
+        </div>
+        <div class="popup-body">
+          <img
+            class="popup-img"
+            src="../assets/iced-coffee.png"
+            alt="coffee bag"
+          />
+          <p class="popup-details"></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="../scripts/index.js"></script>
+  </body>
+</html>

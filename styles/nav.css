@@ -1,0 +1,233 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 36.05px;
+  height: 28.86px;
+}
+
+.hamburger {
+  position: relative;
+}
+
+.hamburger input[type="checkbox"] {
+  display: block;
+  width: 40px;
+  height: 30px;
+
+  position: absolute;
+  cursor: pointer;
+  z-index: 50;
+  opacity: 0;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  margin: 8px;
+  z-index: 1;
+
+  transition: all 0.3s;
+  transform-origin: 0;
+}
+
+.hamburger input[type="checkbox"]:checked ~ div {
+  opacity: 1;
+  transform: rotate(45deg);
+}
+
+.hamburger input[type="checkbox"]:checked ~ div:nth-last-child(3) {
+  opacity: 0;
+}
+
+.hamburger input[type="checkbox"]:checked ~ div:nth-last-child(2) {
+  transform: rotate(-45deg);
+}
+
+.nav-items-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  list-style: none;
+  visibility: hidden;
+  position: absolute;
+
+  background-color: #333;
+  opacity: 0;
+  transition: all 0.1s;
+  width: 200px;
+}
+
+.hamburger > input[type="checkbox"]:checked ~ .nav-items-list {
+  visibility: visible;
+  opacity: 1;
+  border: #242424 solid 5px;
+  top: 40px;
+  left: 0px;
+  z-index: 10;
+  border-radius: 10px;
+}
+
+.nav-items-list li {
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+}
+
+.nav-items-list li:hover {
+  background-color: #555;
+  border-radius: 10px;
+}
+
+.nav-items-list a:visited,
+.nav-items-list a:link {
+  text-decoration: none;
+  color: beige;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17.81px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.cart {
+  position: relative;
+}
+
+.cart-content {
+  position: absolute;
+  top: 25px;
+  right: 0;
+  background-color: #333;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 10px;
+  visibility: hidden;
+  opacity: 0;
+  width: 200px;
+  transition: all 0.3s;
+  text-decoration: none;
+  color: beige;
+  text-align: center;
+}
+
+.cart:hover .cart-content {
+  visibility: visible;
+  opacity: 1;
+}
+
+.cart-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cart-content ul li {
+  padding: 10px;
+}
+
+.notification {
+  position: absolute;
+  top: -15px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 3px;
+  font-size: 10px;
+}
+
+.cart img {
+  height: 16.96px;
+  width: 15px;
+}
+
+.profile img {
+  height: 50px;
+  width: 50px;
+  transform: scaleX(-1);
+  border-radius: 50%;
+}
+
+.active {
+  background-color: #9c8e76;
+  border-radius: 10px;
+}
+
+@media (min-width: 1440px) {
+  .navbar {
+    width: 1220px;
+    gap: 150px;
+  }
+
+  .logo {
+    flex: 1;
+    justify-content: space-between;
+  }
+
+  .hamburger {
+    position: relative;
+  }
+
+  .hamburger input[type="checkbox"] {
+    display: none;
+  }
+
+  .hamburger div {
+    display: none;
+  }
+
+  .hamburger > input[type="checkbox"]:checked ~ .nav-items-list {
+    border: none;
+    top: 0px;
+  }
+
+  .nav-items-list {
+    flex-direction: row;
+    gap: 30px;
+    visibility: visible;
+    background-color: transparent;
+    position: relative;
+    opacity: 1;
+    transition: all 0.1s;
+    width: unset;
+  }
+
+  .nav-items-list li {
+    padding: 10px 20px;
+    transition: all 0.3s;
+    white-space: nowrap;
+  }
+
+  .nav-items-list li:hover {
+    background-color: #9c8e7646;
+    border-radius: 10px;
+  }
+
+  .nav-items-list a:visited,
+  .nav-items-list a:link {
+    color: black;
+  }
+
+  .nav-item {
+    padding: 10px 20px;
+  }
+}
